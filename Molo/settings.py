@@ -74,10 +74,16 @@ WSGI_APPLICATION = 'Molo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+import psycopg2.extensions
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'molo',
+        'USER': 'postgres',
+        'PASSWORD': 'dgtwa34892',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

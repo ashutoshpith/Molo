@@ -15,3 +15,11 @@ def detail(request, ques_id):
 def results(request, ques_id):
     response = 'You are looking at result %s'
     return HttpResponse(response % ques_id)
+
+
+def about(request):
+    return render(request, 'polls/about.html')
+
+
+def contact(req):
+    return render(req, 'polls/contact.html')

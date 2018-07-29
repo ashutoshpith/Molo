@@ -1,15 +1,9 @@
 {% extends "polls/layout.html" %} 
 
+{% block content %}
 
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="/polls/{{ ques.id }}/">{{ question.ques_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,11 +13,19 @@
   <title>Molls</title>
 </head>
 <body>
+  <div class="container">
   <hr>
-  <ul>
-    <ol>a</ol>
-    <ol>b</ol>
-  </ul>
-  
+  {% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ ques.id }}">{{ question.ques_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+  <hr>
+</div> 
 </body>
 </html>
+{% endblock %}

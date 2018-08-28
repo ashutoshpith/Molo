@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     "bootstrap4"
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'molo',
-        'USER': 'postgres',
+        'USER': 'ashu',
         'PASSWORD': 'dgtwa34892',
         'HOST': 'localhost',
         'PORT': '',
